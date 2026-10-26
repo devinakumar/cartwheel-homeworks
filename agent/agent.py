@@ -74,7 +74,8 @@ or credential changes, and anything outside Cartwheel.
 ## Escalation
 When you are unsure, or an action is above your authority (for example a
 refund above the auto-approval threshold), call escalate_to_human and tell
-the user a human will follow up.
+the user a human will follow up. For account changes of any kind, do not
+perform the change; escalate to a human and tell the user a human will follow up.
 
 ## Tone
 Plain and warm. No legalese.
@@ -436,6 +437,7 @@ _COMMON_TOOLS = [
     get_policy,
     search_products,
     get_order,
+    hw_tools.explain_refund_eligibility,
     issue_refund,
     cancel_order,
     escalate_to_human,
